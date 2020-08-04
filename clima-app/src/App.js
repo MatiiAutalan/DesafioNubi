@@ -3,24 +3,47 @@ import "./App.css";
 
 import SearchBar from "./components/SearchBar";
 import WeatherData from "./components/WeatherData";
-import { fetchWeather } from "./services/serviceWeather"
+import { fetchWeather } from "./services/serviceWeather";
 
 class App extends Component {
+  state = {
+    city: "",
+    temperature: "",
+    feelsLike: "",
+    wind: "",
+    description: "",
+    visibility: "",
+    humidity: "",
+    tempMin: "",
+    tempMax: "",
+  };
 
-  getWeather = async e => {
-    e.preventDefault()
+  getWeather = async (e) => {
+    e.preventDefault();
     const { city } = e.target.elements;
     const cityValue = city.value;
 
     const response = await fetchWeather(cityValue);
     console.log(response.data);
+
+    this.setState({
+      city: response.data.name,
+      temperature: response.data.main.temp,
+      feelsLike: response.data.main.feels_like,
+      wind: response.data.wind.speed,
+      description: response.data.weather[0].description,
+      visibility: response.data.visibility,
+      humidity: response.data.main.humidity,
+      tempMin: response.data.main.temp_min,
+      tempMax: response.data.main.temp_max,
+    });
   };
 
   render() {
     return (
       <div className="App">
         <SearchBar getWeather={this.getWeather} />
-        <WeatherData />
+        <WeatherData {...this.state} />
       </div>
     );
   }
