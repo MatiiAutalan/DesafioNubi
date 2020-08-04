@@ -16,6 +16,7 @@ class App extends Component {
     humidity: "",
     tempMin: "",
     tempMax: "",
+    error: null,
   };
 
   getWeather = async (e) => {
@@ -23,20 +24,24 @@ class App extends Component {
     const { city } = e.target.elements;
     const cityValue = city.value;
 
-    const response = await fetchWeather(cityValue);
-    console.log(response.data);
+    if (cityValue) {
+      const response = await fetchWeather(cityValue);
 
-    this.setState({
-      city: response.data.name,
-      temperature: response.data.main.temp,
-      feelsLike: response.data.main.feels_like,
-      wind: response.data.wind.speed,
-      description: response.data.weather[0].description,
-      visibility: response.data.visibility,
-      humidity: response.data.main.humidity,
-      tempMin: response.data.main.temp_min,
-      tempMax: response.data.main.temp_max,
-    });
+      this.setState({
+        city: response.data.name,
+        temperature: response.data.main.temp,
+        feelsLike: response.data.main.feels_like,
+        wind: response.data.wind.speed,
+        description: response.data.weather[0].description,
+        visibility: response.data.visibility,
+        humidity: response.data.main.humidity,
+        tempMin: response.data.main.temp_min,
+        tempMax: response.data.main.temp_max,
+        error: null,
+      });
+    } else {
+      this.setState({error: "¡Por favor ingrese una ciudad valida!"})
+    }
   };
 
   render() {
