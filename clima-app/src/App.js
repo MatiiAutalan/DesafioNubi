@@ -23,10 +23,10 @@ class App extends Component {
     e.preventDefault();
     const { city } = e.target.elements;
     const cityValue = city.value;
-
-    if (cityValue) {
+    
+    
       const response = await fetchWeather(cityValue);
-
+    if (response.data.name !== undefined) { 
       this.setState({
         city: response.data.name,
         temperature: response.data.main.temp,

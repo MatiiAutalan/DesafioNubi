@@ -5,13 +5,12 @@ const WeatherData = (props) => {
 
   return (
     <div>
-      {props.error &&
+      {props.error && 
         <div>
           <p>{props.error}</p>
         </div>
       }
-      {
-      props.temperature ? 
+      {props.temperature ? 
         <div>
           <h1>{props.city}</h1>
           <div>
@@ -30,10 +29,8 @@ const WeatherData = (props) => {
             </div>
           </div>
         </div>
-        : 
-        <div>
-          Ingresa una ciudad!
-        </div>
+       : 
+        <div>Ingresa una ciudad!</div>
       }
     </div>
   );
