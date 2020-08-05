@@ -29,7 +29,7 @@ const WeatherData = (props) => {
           </div>
         </div>
        : 
-        <div>Ingresa una ciudad!</div>
+        <div><p>Ingresa una ciudad</p></div>
       }
     </div>
   );
