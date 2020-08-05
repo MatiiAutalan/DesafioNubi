@@ -1,7 +1,6 @@
 import React from "react";
 
 const WeatherData = (props) => {
-  console.log(props);
 
   return (
     <div>
