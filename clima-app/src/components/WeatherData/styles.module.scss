@@ -1,0 +1,30 @@
+@import "../../constants/colors.scss";
+
+.container {
+  background-color: $background-color;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  color: $text-color;
+}
+
+.alertError {
+  margin: 0;
+  font-family: "Roboto Condensed", sans-serif;
+  color: red;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.noData{
+  background-color:$background-color;
+  height: 390px;
+}
+.data {
+  width: 750px;
+  height: 390px;
+  display: flex;
+  justify-content: space-around;
+}

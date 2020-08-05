@@ -6,12 +6,12 @@ const SearchBar = (props) => {
     <div className={styles.container}>
       <h1 className={styles.title}>¡Bienvenidxs a Clima-App!</h1>
       <h2 className={styles.subtitle}>
-        Busca el clima actual de más de 20000 ciudades disponibles.
+        Busca el clima actual de más de 200000 ciudades disponibles.
       </h2>
       <div>
         <form onSubmit={props.getWeather}>
           <div>
-            <input type="text" name="city" placeholder="El tiempo en..." />
+            <input autoFocus type="text" name="city" placeholder="El clima en..."/>
           </div>
           <button>Buscar</button>
         </form>
