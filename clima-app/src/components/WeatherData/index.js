@@ -10,15 +10,18 @@ const WeatherData = (props) => {
         </div>
       }
       {props.temperature ? 
-      <div>
+      <div className={styles.containerData}>
         <h1>{props.city}</h1>
         <div className={styles.data}>
-          <div>
+          <div className={styles.principalData}>
             <h1>T {props.temperature} °C</h1>
             <h3>ST {props.feelsLike} °C</h3>
             <h3>{props.description}</h3>
           </div>
           <div>
+            <img src={props.icon} alt="imagen estado clima"/>
+          </div>
+          <div className={styles.secondaryData}>
             <p>
               Min {props.tempMin} / Max {props.tempMax}
             </p>
