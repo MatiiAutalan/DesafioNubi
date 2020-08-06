@@ -1,7 +1,7 @@
 @import "../../constants/colors.scss";
 
 .container {
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: center;
   font-family: "Montserrat", sans-serif;
@@ -12,26 +12,26 @@
   margin: 0;
   font-family: "Roboto Condensed", sans-serif;
   color: red;
-  font-size: 20px;
+  font-size: 1.5vw;
+  position: absolute;
   display: flex;
   justify-content: center;
 }
 
 .noData {
-  height: 61vh;
+  height: 29.8vw;
 }
 
 .data {
-  width: 150vh;
-  height: 48.2vh;
+  height: 23.5vw;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .principalData {
   h1 {
     margin: 0;
-    font-size: 50px;
+    font-size: 4vw;
   }
 }
 
@@ -42,10 +42,14 @@
   
   p {
     margin: 5px;
-    font-size: 25px;
+    font-size: 2vw;
   }
 }
 
-.containerData div img{
-  border-bottom: 20px;
+.containerIcon {
+  margin: 0 4vw;
+
+  h3 {
+    margin-top: 0;
+  }
 }

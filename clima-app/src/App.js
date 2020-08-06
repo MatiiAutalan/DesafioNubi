@@ -17,6 +17,7 @@ class App extends Component {
     tempMin: "",
     tempMax: "",
     icon: "",
+    pressure: "",
     error: null,
   };
 
@@ -28,7 +29,6 @@ class App extends Component {
     
       const response = await fetchWeather(cityValue);
     if (response.data.name !== undefined) { 
-      console.log(response.data.weather[0].icon)
       this.setState({
         city: response.data.name,
         temperature: response.data.main.temp,
@@ -39,7 +39,8 @@ class App extends Component {
         humidity: response.data.main.humidity,
         tempMin: response.data.main.temp_min,
         tempMax: response.data.main.temp_max,
-        icon: "http://openweathermap.org/img/wn/"+response.data.weather[0].icon+"@4x.png",
+        icon: "http://openweathermap.org/img/wn/"+response.data.weather[0].icon+"@2x.png",
+        pressure: response.data.main.pressure,
         error: null,
       });
     } else {

@@ -6,7 +6,7 @@ const SearchBar = (props) => {
     <div className={styles.container}>
       <h1 className={styles.title}>¡Bienvenidxs a Clima-App!</h1>
       <h2 className={styles.subtitle}>
-        Busca el clima actual de más de 200000 ciudades disponibles.
+        Busca el clima actual de más de 200.000 ciudades disponibles.
       </h2>
       <div>
         <form onSubmit={props.getWeather}>
