@@ -8,7 +8,7 @@ const AddFavorites = () => {
   };
   return (
     <button className={styles.fav}>
-      <img className={styles.heart} src={heartfav} alt="icono favoritos" onclick={handleClick}/>
+      <img className={styles.heart} src={heartfav} alt="icono favoritos" onClick={handleClick} />
     </button>
   );
 };
