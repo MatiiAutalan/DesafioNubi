@@ -1,7 +1,9 @@
 import React from "react";
 import styles from "../WeatherData/styles.module.scss";
+import AddFavorites from "../AddFavorites/index"
 
 const WeatherData = (props) => {
+
   return (
     <div className={styles.container}>
       {props.error && 
@@ -11,7 +13,10 @@ const WeatherData = (props) => {
       }
       {props.temperature ? 
       <div>
+        <div className={styles.title}>
         <h1>{props.city}</h1>
+        <AddFavorites/>
+        </div>
         <div className={styles.data}>
           <div className={styles.principalData}>
             <h1>T {props.temperature} °C</h1>

@@ -1,0 +1,17 @@
+.fav {
+  background: transparent;
+  border: transparent;
+  outline: none;
+
+  img {
+    width: 2vw;
+    height: 2vw;
+    margin-left: 10px;
+    margin-top: 3px;
+
+    &:hover {
+      width: 2.3vw;
+      height: 2.3vw;
+    }
+  }
+}
