@@ -15,7 +15,7 @@ const WeatherData = (props) => {
       <div>
         <div className={styles.title}>
         <h1>{props.city}</h1>
-        <AddFavorites/>
+        <AddFavorites handleAddFavorite={props.handleAddFavorite({city: props.city, temperature: props.temperature, tempMin: props.tempMin, tempMax: props.tempMax, feelsLike: props.feelsLike, icon: props.icon})}/>
         </div>
         <div className={styles.data}>
           <div className={styles.principalData}>
@@ -26,7 +26,7 @@ const WeatherData = (props) => {
             </p>
           </div>
           <div className={styles.containerIcon}>
-            <img src={props.icon} alt="imagen estado clima"/>
+            <img src={props.icon} alt="imagen-estado-clima"/>
             <h3>{props.description}</h3>
           </div>
           <div className={styles.secondaryData}>

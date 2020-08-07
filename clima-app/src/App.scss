@@ -1,0 +1,39 @@
+.App {
+  background-image: url('./assets/santiago.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.SearchContent {
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+}
+
+.Favourite {
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  justify-content: center;
+  height: 29%;
+  width: 100%;
+  color: white;
+  overflow: auto;
+  opacity: .6;
+}
+
+.FavoritesCards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.FavoriteTitle { 
+  color: black;
+  display: flex;
+  justify-content: center;
+}
