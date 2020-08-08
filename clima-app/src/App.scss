@@ -1,5 +1,5 @@
 .App {
-  background-image: url('./assets/santiago.jpg');
+  background-image: url("./assets/santiago.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -32,7 +32,7 @@
   flex-wrap: wrap;
 }
 
-.FavoriteTitle { 
+.FavoriteTitle {
   color: black;
   display: flex;
   justify-content: center;

@@ -6,10 +6,10 @@ const Favorite = ({ favorite }) => {
   const { city, temperature, tempMin, tempMax } = favorite;
   return (
     <div className={styles.container}>
-        <p className={styles.title}>{city}</p>
-        <p>T {temperature} °C</p>
-        <p>Min {tempMin} °C</p>
-        <p>Max {tempMax} °C</p>
+      <p className={styles.title}>{city}</p>
+      <p>T {temperature} °C</p>
+      <p>Min {tempMin} °C</p>
+      <p>Max {tempMax} °C</p>
     </div>
   );
 };
