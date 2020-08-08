@@ -2,16 +2,14 @@ import React from "react";
 
 import styles from "./styles.module.scss";
 
-const Favorite = ({favorite}) => {
-  const {city, temperature, tempMin, tempMax, feelsLike, icon} = favorite;
+const Favorite = ({ favorite }) => {
+  const { city, temperature, tempMin, tempMax } = favorite;
   return (
     <div className={styles.container}>
-    <p>{city}</p>
-    <p>{temperature}</p>
-    <p>{tempMin}</p>
-    <p>{tempMax}</p>
-    <p>{feelsLike}</p>
-    <img src={icon} alt="imagen-estado-clima"/>
+        <p className={styles.title}>{city}</p>
+        <p>T {temperature} °C</p>
+        <p>Min {tempMin} °C</p>
+        <p>Max {tempMax} °C</p>
     </div>
   );
 };

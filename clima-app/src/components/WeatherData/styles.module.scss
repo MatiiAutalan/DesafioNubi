@@ -1,11 +1,10 @@
-@import "../../constants/colors.scss";
 
 .container {
   width: 100vw;
   display: flex;
   justify-content: center;
   font-family: "Montserrat", sans-serif;
-  color: $text-color;
+  color: black;
 }
 
 .alertError {

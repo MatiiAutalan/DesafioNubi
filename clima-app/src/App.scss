@@ -11,19 +11,19 @@
 .SearchContent {
   display: flex;
   flex-direction: column;
-  height: 70%;
+  height: 60%;
 }
 
 .Favourite {
   display: flex;
-  background-color: white;
+  background-color: gray;
   flex-direction: column;
   justify-content: center;
-  height: 29%;
+  height: 40%;
   width: 100%;
   color: white;
   overflow: auto;
-  opacity: .6;
+  opacity: 0.8;
 }
 
 .FavoritesCards {
@@ -36,4 +36,6 @@
   color: black;
   display: flex;
   justify-content: center;
+  font-family: "Roboto Condensed", sans-serif;
+  margin: 5px 0;
 }
